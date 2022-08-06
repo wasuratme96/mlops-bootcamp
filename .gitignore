@@ -129,4 +129,5 @@ dmypy.json
 .pyre/
 
 # MLflow
-.mlruns/
+02-experiment-tracking/mlruns/
+models/
