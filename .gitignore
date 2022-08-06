@@ -131,3 +131,4 @@ dmypy.json
 # MLflow
 02-experiment-tracking/mlruns/
 models/
+02-experiment-tracking/mlflow usage/mlruns/
