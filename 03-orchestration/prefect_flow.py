@@ -126,7 +126,7 @@ def train_best_model(train, valid, y_val, dv):
         mlflow.xgboost.log_model(booster, artifact_path="models_mlflow")
  
  # @flow(task_runner = ConcurrentTaskRunner()) -> Default value but do not work when use with mlflow !
-@flow(task_runner=SequentialTaskRunner())
+@flow(task_runner=SequentialTaskRunner(), name = "NYC Taxi Duration Prediction")
 def main(train_path: str="./data/green_tripdata_2021-01.parquet",
         val_path: str="./data/green_tripdata_2021-02.parquet"):
     
