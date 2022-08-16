@@ -134,4 +134,5 @@ models/
 02-experiment-tracking/mlflow usage/mlruns/
 02-experiment-tracking/mlflow usage/artifacts_local/
 03-orchestration/mlruns/
-03-orchestration/ml-tracking-key.pem
+03-orchestration/ml-tracking-key.pem 
+03-orchestration/prefect_run/

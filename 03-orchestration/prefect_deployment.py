@@ -143,3 +143,16 @@ def main(train_path: str="./data/green_tripdata_2021-01.parquet",
     
     train_model_search(train, valid, y_val)
     train_best_model(train, valid, y_val, dv)
+
+from prefect.deployments import DeploymentSpec
+from prefect.orion.schemas.schedules import IntervalSchedule
+from prefect.flow_runners import SubprocessFlowRunner
+from datetime import timedelta
+
+DeploymentSpec(
+    flow = main,
+    name = "model_training",
+    schedule = IntervalSchedule(interval = timedelta(minutes = 5)),
+    flow_runner = SubprocessFlowRunner(),
+    tags = ["mlops"]
+    )
