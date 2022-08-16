@@ -2,7 +2,9 @@
 
 This is instruction of how you can set up free cloud VM on AWS (EC2).
 Then guide on how to host [```Prefect```](https://www.prefect.io/) as a MLOps online server.
+
 ![Logo](./pic/aws_prefect_logo.png)
+
 ## Set up EC2 on AWS
 1. **Creat AWS Account**
 
@@ -87,6 +89,7 @@ You check installation completeness by use below script
 prefect version
 ```
 You expect to see somethings like below snapshot.
+
 ![Prefect Version](./pic/prefect_version.png)
 
 Then you have to set ```PREFECT_ORION_UI_API_URL``` with below script. You have to replace *```<external-ip>```* with you *Public IPv4 Address* from your EC2 instance
