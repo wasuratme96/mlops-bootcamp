@@ -62,7 +62,7 @@ def train_model_search(train, valid, y_val):
             booster = xgb.train(
                 params=params,
                 dtrain=train,
-                num_boost_round=500,
+                num_boost_round=200,
                 evals=[(valid, 'validation')],
                 early_stopping_rounds=50
             )
@@ -110,7 +110,7 @@ def train_best_model(train, valid, y_val, dv):
         booster = xgb.train(
             params=best_params,
             dtrain=train,
-            num_boost_round=500,
+            num_boost_round=200,
             evals=[(valid, 'validation')],
             early_stopping_rounds=50
         )
